@@ -1,0 +1,100 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "2048",
+      "category": "puzzle",
+      "description": "Combine tiles to reach 2048",
+      "emoji": "🔢",
+      "iframeUrl": "https://gabrielecirulli.github.io/2048/"
+    },
+    {
+      "id": 2,
+      "title": "Flappy Bird",
+      "category": "action",
+      "description": "Navigate through pipes with a flying bird",
+      "emoji": "🐦",
+      "iframeUrl": "https://flappybird.io/"
+    },
+    {
+      "id": 3,
+      "title": "Snake Game",
+      "category": "puzzle",
+      "description": "Classic snake game - eat food and grow",
+      "emoji": "🐍",
+      "iframeUrl": "https://playsnakegame.org/"
+    },
+    {
+      "id": 4,
+      "title": "Pac-Man",
+      "category": "action",
+      "description": "Help Pac-Man avoid ghosts and eat pellets",
+      "emoji": "👾",
+      "iframeUrl": "https://pacman.live/"
+    },
+    {
+      "id": 5,
+      "title": "Tic Tac Toe",
+      "category": "strategy",
+      "description": "Play against AI in this classic game",
+      "emoji": "⭕",
+      "iframeUrl": "https://playtictactoe.org/"
+    },
+    {
+      "id": 6,
+      "title": "Chess",
+      "category": "strategy",
+      "description": "Play chess against computer or friends",
+      "emoji": "♟️",
+      "iframeUrl": "https://www.chess.com/play/online"
+    },
+    {
+      "id": 7,
+      "title": "Breakout",
+      "category": "action",
+      "description": "Break bricks with a bouncing ball",
+      "emoji": "🧱",
+      "iframeUrl": "https://www.breakout-game.com/"
+    },
+    {
+      "id": 8,
+      "title": "Pong",
+      "category": "sports",
+      "description": "Classic Pong arcade game",
+      "emoji": "🏓",
+      "iframeUrl": "https://pong.com/"
+    },
+    {
+      "id": 9,
+      "title": "Dinosaur Game",
+      "category": "action",
+      "description": "Jump over obstacles as a running dinosaur",
+      "emoji": "🦕",
+      "iframeUrl": "https://chromedino.com/"
+    },
+    {
+      "id": 10,
+      "title": "Wordle",
+      "category": "puzzle",
+      "description": "Guess the word in 6 tries",
+      "emoji": "📝",
+      "iframeUrl": "https://www.wordle.com/"
+    },
+    {
+      "id": 11,
+      "title": "Minesweeper",
+      "category": "puzzle",
+      "description": "Find all mines without clicking on them",
+      "emoji": "💣",
+      "iframeUrl": "https://minesweeper.online/"
+    },
+    {
+      "id": 12,
+      "title": "Tetris",
+      "category": "puzzle",
+      "description": "Stack falling blocks to complete rows",
+      "emoji": "🧩",
+      "iframeUrl": "https://tetris.com/play-tetris"
+    }
+  ]
+}
