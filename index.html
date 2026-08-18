@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎮 Unblocked Games</h1>
+            <p class="tagline">Play your favorite games anytime, anywhere</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search games..." 
+                    class="search-input"
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Games</button>
+                <button class="filter-btn" data-filter="action">Action</button>
+                <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+                <button class="filter-btn" data-filter="strategy">Strategy</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="games-section">
+            <div id="gamesList" class="games-grid">
+                <!-- Games will be loaded here by JavaScript -->
+            </div>
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>No games found. Try a different search or filter.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <div class="modal-header">
+                <h2 id="modalGameTitle"></h2>
+                <span id="modalGameCategory" class="game-category"></span>
+            </div>
+            <div class="game-frame-container">
+                <iframe id="gameFrame" src="" frameborder="0" allow="autoplay; fullscreen"></iframe>
+            </div>
+            <button id="fullscreenBtn" class="fullscreen-btn">⛶ Fullscreen</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
+            <p>Have fun and enjoy your favorite games!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
