@@ -111,6 +111,14 @@
       "description": "Competitive shooter - Build, fight and survive",
       "emoji": "⚔️",
       "iframeUrl": "https://unblokedgames.github.io/projects/1v1.lol/index.html"
+    },
+    {
+      "id": 15,
+      "title": "Ball Sort Puzzle",
+      "category": "puzzle",
+      "description": "Sort colored balls into matching tubes",
+      "emoji": "🔮",
+      "iframeUrl": "https://unblokedgames.github.io/projects/ball-sort-puzzle/index.html"
     }
   ]
 }
