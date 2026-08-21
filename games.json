@@ -199,6 +199,14 @@
       "description": "Use the shell to jump",
       "emoji": "🦘",
       "iframeUrl": "https://jumpingshellgame.github.io/"
+    },
+    {
+      "id": 26,
+      "title": "Baldi's Basics",
+      "category": "puzzle",
+      "description": "Survive Baldi's schoolhouse by solving problems and finding notebooks",
+      "emoji": "📓",
+      "iframeUrl": "https://unblokedgames.github.io/projects/baldis-basics/index.html"
     }
   ]
 }
