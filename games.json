@@ -143,6 +143,38 @@
       "description": "Draw your territory and conquer other players",
       "emoji": "📄",
       "iframeUrl": "https://unblokedgames.github.io/projects/paperio2/index.html"
+    },
+    {
+      "id": 19,
+      "title": "Retro Bowl",
+      "category": "sports",
+      "description": "Classic football game with retro graphics",
+      "emoji": "🏈",
+      "iframeUrl": "https://unblokedgames.github.io/projects/retro-bowl/index.html"
+    },
+    {
+      "id": 20,
+      "title": "Slope",
+      "category": "action",
+      "description": "Roll down a slope avoiding obstacles",
+      "emoji": "⛷️",
+      "iframeUrl": "https://unblokedgames.github.io/projects/slope/index.html"
+    },
+    {
+      "id": 21,
+      "title": "Subway Surfers",
+      "category": "action",
+      "description": "Run and jump through subway tracks",
+      "emoji": "🚇",
+      "iframeUrl": "https://unblokedgames.github.io/projects/subway-surfers-unity/barcelona.html"
+    },
+    {
+      "id": 22,
+      "title": "Moto X3M",
+      "category": "sports",
+      "description": "Perform stunts on a motorcycle",
+      "emoji": "🏍️",
+      "iframeUrl": "https://unblokedgames.github.io/projects/moto-x3m/index.html"
     }
   ]
 }
