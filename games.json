@@ -185,4 +185,12 @@
       "iframeUrl": "https://unblokedgames.github.io/projects/vex3/index.html"
     }
   ]
+},
+{
+  "id": 25,
+  "title": "Stack",
+  "category": "strategy",
+  "description": "Stack as many blocks as you can before running out",
+  "emoji": "📚",
+  "iframeUrl": "https://unblokedgames.github.io/projects/stack/index.html"
 }
