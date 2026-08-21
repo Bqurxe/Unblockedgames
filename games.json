@@ -119,6 +119,14 @@
       "description": "Sort colored balls into matching tubes",
       "emoji": "🔮",
       "iframeUrl": "https://unblokedgames.github.io/projects/ball-sort-puzzle/index.html"
+    },
+    {
+      "id": 16,
+      "title": "Eaglercraft",
+      "category": "action",
+      "description": "Build and explore in this blocky sandbox world",
+      "emoji": "⛏️",
+      "iframeUrl": "https://unblokedgames.github.io/projects/eaglercraft/index.html"
     }
   ]
 }
