@@ -127,6 +127,14 @@
       "description": "Build and explore in this blocky sandbox world",
       "emoji": "⛏️",
       "iframeUrl": "https://unblokedgames.github.io/projects/eaglercraft/index.html"
+    },
+    {
+      "id": 17,
+      "title": "Drift Boss",
+      "category": "sports",
+      "description": "Master the art of drifting and earn high scores",
+      "emoji": "🏎️",
+      "iframeUrl": "https://unblokedgames.github.io/projects/drift-boss/index.html"
     }
   ]
 }
