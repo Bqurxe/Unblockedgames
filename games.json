@@ -103,6 +103,14 @@
       "description": "Run and jump through dangerous terrain",
       "emoji": "🏃",
       "iframeUrl": "https://files.gamezhero.com/game/905/1d1/9051d1173be765fb/data/index.html"
+    },
+    {
+      "id": 14,
+      "title": "1v1.lol",
+      "category": "action",
+      "description": "Competitive shooter - Build, fight and survive",
+      "emoji": "⚔️",
+      "iframeUrl": "https://unblokedgames.github.io/projects/1v1.lol/index.html"
     }
   ]
 }
