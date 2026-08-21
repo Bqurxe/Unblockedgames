@@ -175,9 +175,14 @@
       "description": "Perform stunts on a motorcycle",
       "emoji": "🏍️",
       "iframeUrl": "https://unblokedgames.github.io/projects/moto-x3m/index.html"
+    },
+    {
+      "id": 23,
+      "title": "Vex 3",
+      "category": "action",
+      "description": "Navigate through challenging obstacle courses",
+      "emoji": "🎮",
+      "iframeUrl": "https://unblokedgames.github.io/projects/vex3/index.html"
     }
   ]
 }
-
-
-
