@@ -135,6 +135,14 @@
       "description": "Master the art of drifting and earn high scores",
       "emoji": "🏎️",
       "iframeUrl": "https://unblokedgames.github.io/projects/drift-boss/index.html"
+    },
+    {
+      "id": 18,
+      "title": "Paper.io 2",
+      "category": "action",
+      "description": "Draw your territory and conquer other players",
+      "emoji": "📄",
+      "iframeUrl": "https://unblokedgames.github.io/projects/paperio2/index.html"
     }
   ]
 }
