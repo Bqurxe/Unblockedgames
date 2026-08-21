@@ -191,6 +191,14 @@
       "description": "Stack as many blocks as you can before running out",
       "emoji": "📚",
       "iframeUrl": "https://unblokedgames.github.io/projects/stack/index.html"
+    },
+    {
+      "id": 25,
+      "title": "Jumping Shell",
+      "category": "sports",
+      "description": "Use the shell to jump",
+      "emoji": "🦘",
+      "iframeUrl": "https://jumpingshellgame.github.io/"
     }
   ]
 }
