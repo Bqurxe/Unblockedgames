@@ -105,4 +105,26 @@
       "iframeUrl": "https://unblokedgames.github.io/projects/geodash/index.html"
     }
   ]
-}
+},
+{
+  "id": 14,
+  "title": "Google Snake",
+  "category": "puzzle",
+  "description": "Classic snake game — eat, grow, and avoid crashing into yourself",
+  "emoji": "🐍",
+  "iframeUrl": "https://unblokedgames.github.io/projects/google-snake/index.html"
+ }
+],
+{
+  "games": [
+    {
+      "id": 15,
+      "title": "Tomb of the Mask",
+      "category": "puzzle",
+      "description": "",
+      "emoji": "🎭",
+      "iframeUrl": "https://unblokedgames.github.io/projects/totm/index.html"
+    }
+  ]
+},
+
