@@ -2,210 +2,98 @@
   "games": [
     {
       "id": 1,
-      "title": "2048",
-      "category": "puzzle",
-      "description": "Combine tiles to reach 2048",
-      "emoji": "🔢",
-      "iframeUrl": "https://gabrielecirulli.github.io/2048/"
-    },
-    {
-      "id": 2,
-      "title": "Flappy Bird",
-      "category": "action",
-      "description": "Navigate through pipes with a flying bird",
-      "emoji": "🐦",
-      "iframeUrl": "https://flappybird.io/"
-    },
-    {
-      "id": 3,
-      "title": "Snake Game",
-      "category": "puzzle",
-      "description": "Classic snake game - eat food and grow",
-      "emoji": "🐍",
-      "iframeUrl": "https://playsnakegame.org/"
-    },
-    {
-      "id": 4,
-      "title": "Pac-Man",
-      "category": "action",
-      "description": "Help Pac-Man avoid ghosts and eat pellets",
-      "emoji": "👾",
-      "iframeUrl": "https://pacman.live/"
-    },
-    {
-      "id": 5,
-      "title": "Tic Tac Toe",
-      "category": "strategy",
-      "description": "Play against AI in this classic game",
-      "emoji": "⭕",
-      "iframeUrl": "https://playtictactoe.org/"
-    },
-    {
-      "id": 6,
-      "title": "Chess",
-      "category": "strategy",
-      "description": "Play chess against computer or friends",
-      "emoji": "♟️",
-      "iframeUrl": "https://www.chess.com/play/online"
-    },
-    {
-      "id": 7,
-      "title": "Breakout",
-      "category": "action",
-      "description": "Break bricks with a bouncing ball",
-      "emoji": "🧱",
-      "iframeUrl": "https://www.breakout-game.com/"
-    },
-    {
-      "id": 8,
-      "title": "Pong",
-      "category": "sports",
-      "description": "Classic Pong arcade game",
-      "emoji": "🏓",
-      "iframeUrl": "https://pong.com/"
-    },
-    {
-      "id": 9,
-      "title": "Dinosaur Game",
-      "category": "action",
-      "description": "Jump over obstacles as a running dinosaur",
-      "emoji": "🦕",
-      "iframeUrl": "https://chromedino.com/"
-    },
-    {
-      "id": 10,
-      "title": "Wordle",
-      "category": "puzzle",
-      "description": "Guess the word in 6 tries",
-      "emoji": "📝",
-      "iframeUrl": "https://www.wordle.com/"
-    },
-    {
-      "id": 11,
-      "title": "Minesweeper",
-      "category": "puzzle",
-      "description": "Find all mines without clicking on them",
-      "emoji": "💣",
-      "iframeUrl": "https://minesweeper.online/"
-    },
-    {
-      "id": 12,
-      "title": "Tetris",
-      "category": "puzzle",
-      "description": "Stack falling blocks to complete rows",
-      "emoji": "🧩",
-      "iframeUrl": "https://tetris.com/play-tetris"
-    },
-    {
-      "id": 13,
-      "title": "Dino Run",
-      "category": "action",
-      "description": "Run and jump through dangerous terrain",
-      "emoji": "🏃",
-      "iframeUrl": "https://files.gamezhero.com/game/905/1d1/9051d1173be765fb/data/index.html"
-    },
-    {
-      "id": 14,
-      "title": "1v1.lol",
-      "category": "action",
-      "description": "Competitive shooter - Build, fight and survive",
-      "emoji": "⚔️",
-      "iframeUrl": "https://unblokedgames.github.io/projects/1v1.lol/index.html"
-    },
-    {
-      "id": 15,
       "title": "Ball Sort Puzzle",
       "category": "puzzle",
       "description": "Sort colored balls into matching tubes",
-      "emoji": "🔮",
+      "emoji": "\ud83d\udd2e",
       "iframeUrl": "https://unblokedgames.github.io/projects/ball-sort-puzzle/index.html"
     },
     {
-      "id": 16,
+      "id": 2,
       "title": "Eaglercraft",
       "category": "action",
       "description": "Build and explore in this blocky sandbox world",
-      "emoji": "⛏️",
+      "emoji": "\u26cf\ufe0f",
       "iframeUrl": "https://unblokedgames.github.io/projects/eaglercraft/index.html"
     },
     {
-      "id": 17,
+      "id": 3,
       "title": "Drift Boss",
       "category": "sports",
       "description": "Master the art of drifting and earn high scores",
-      "emoji": "🏎️",
+      "emoji": "\ud83c\udfce\ufe0f",
       "iframeUrl": "https://unblokedgames.github.io/projects/drift-boss/index.html"
     },
     {
-      "id": 18,
+      "id": 4,
       "title": "Paper.io 2",
       "category": "action",
       "description": "Draw your territory and conquer other players",
-      "emoji": "📄",
+      "emoji": "\ud83d\udcc4",
       "iframeUrl": "https://unblokedgames.github.io/projects/paperio2/index.html"
     },
     {
-      "id": 19,
+      "id": 5,
       "title": "Retro Bowl",
       "category": "sports",
       "description": "Classic football game with retro graphics",
-      "emoji": "🏈",
+      "emoji": "\ud83c\udfc8",
       "iframeUrl": "https://unblokedgames.github.io/projects/retro-bowl/index.html"
     },
     {
-      "id": 20,
+      "id": 6,
       "title": "Slope",
       "category": "action",
       "description": "Roll down a slope avoiding obstacles",
-      "emoji": "⛷️",
+      "emoji": "\u26f7\ufe0f",
       "iframeUrl": "https://unblokedgames.github.io/projects/slope/index.html"
     },
     {
-      "id": 21,
+      "id": 7,
       "title": "Subway Surfers",
       "category": "action",
       "description": "Run and jump through subway tracks",
-      "emoji": "🚇",
+      "emoji": "\ud83d\ude87",
       "iframeUrl": "https://unblokedgames.github.io/projects/subway-surfers-unity/barcelona.html"
     },
     {
-      "id": 22,
+      "id": 8,
       "title": "Moto X3M",
       "category": "sports",
       "description": "Perform stunts on a motorcycle",
-      "emoji": "🏍️",
+      "emoji": "\ud83c\udfcd\ufe0f",
       "iframeUrl": "https://unblokedgames.github.io/projects/moto-x3m/index.html"
     },
     {
-      "id": 23,
+      "id": 9,
       "title": "Vex 3",
       "category": "action",
       "description": "Navigate through challenging obstacle courses",
-      "emoji": "🎮",
+      "emoji": "\ud83c\udfae",
       "iframeUrl": "https://unblokedgames.github.io/projects/vex3/index.html"
     },
     {
-      "id": 24,
+      "id": 10,
       "title": "Stack",
       "category": "strategy",
       "description": "Stack as many blocks as you can before running out",
-      "emoji": "📚",
+      "emoji": "\ud83d\udcda",
       "iframeUrl": "https://unblokedgames.github.io/projects/stack/index.html"
     },
     {
-      "id": 25,
+      "id": 11,
       "title": "Jumping Shell",
       "category": "sports",
       "description": "Use the shell to jump",
-      "emoji": "🦘",
+      "emoji": "\ud83e\udd98",
       "iframeUrl": "https://jumpingshellgame.github.io/"
     },
     {
-      "id": 26,
+      "id": 12,
       "title": "Baldi's Basics",
       "category": "puzzle",
       "description": "Survive Baldi's schoolhouse by solving problems and finding notebooks",
-      "emoji": "📓",
+      "emoji": "\ud83d\udcd3",
       "iframeUrl": "https://unblokedgames.github.io/projects/baldis-basics/index.html"
     }
   ]
