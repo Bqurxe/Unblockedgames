@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- ==========================================================================
+         HEADER
+         ========================================================================== -->
     <header>
         <div class="container">
             <h1>🎮 Unblocked Games</h1>
@@ -14,17 +18,25 @@
         </div>
     </header>
 
+
+    <!-- ==========================================================================
+         NAVBAR (Search + Filters)
+         ========================================================================== -->
     <nav class="navbar">
         <div class="container">
+
+            <!-- Search -->
             <div class="search-bar">
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Search games..." 
+                <input
+                    type="text"
+                    id="searchInput"
                     class="search-input"
+                    placeholder="Search games..."
                 >
                 <span class="search-icon">🔍</span>
             </div>
+
+            <!-- Category Filters -->
             <div class="filters">
                 <button class="filter-btn active" data-filter="all">All Games</button>
                 <button class="filter-btn" data-filter="action">Action</button>
@@ -32,51 +44,78 @@
                 <button class="filter-btn" data-filter="strategy">Strategy</button>
                 <button class="filter-btn" data-filter="sports">Sports</button>
             </div>
+
         </div>
     </nav>
 
+
+    <!-- ==========================================================================
+         MAIN CONTENT
+         ========================================================================== -->
     <main class="container">
-        <!-- Trending Section -->
+
+        <!-- ── Trending Section ─────────────────────────────────────────────── -->
         <section class="trending-section">
             <div class="section-header">
                 <h2>🔥 Trending Games</h2>
                 <p class="section-subtitle">Most popular right now</p>
             </div>
+
             <div id="trendingList" class="games-grid trending-grid">
-                <!-- Trending games will be loaded here by JavaScript -->
+                <!-- Trending games are injected here by script.js -->
             </div>
         </section>
 
-        <!-- All Games Section -->
+        <!-- ── All Games Section ────────────────────────────────────────────── -->
         <section class="games-section">
             <div class="section-header">
                 <h2>🎯 All Games</h2>
                 <p class="section-subtitle">Browse our full collection</p>
             </div>
+
             <div id="gamesList" class="games-grid">
-                <!-- Games will be loaded here by JavaScript -->
+                <!-- Games are injected here by script.js -->
             </div>
+
             <div id="noResults" class="no-results" style="display: none;">
                 <p>No games found. Try a different search or filter.</p>
             </div>
         </section>
+
     </main>
 
-    <!-- Game Modal -->
+
+    <!-- ==========================================================================
+         GAME MODAL
+         ========================================================================== -->
     <div id="gameModal" class="modal">
         <div class="modal-content">
+
             <button class="close-btn">&times;</button>
+
             <div class="modal-header">
                 <h2 id="modalGameTitle"></h2>
                 <span id="modalGameCategory" class="game-category"></span>
             </div>
+
             <div class="game-frame-container">
-                <iframe id="gameFrame" src="" frameborder="0" allow="autoplay; fullscreen"></iframe>
+                <iframe
+                    id="gameFrame"
+                    src=""
+                    frameborder="0"
+                    allow="autoplay; fullscreen"
+                ></iframe>
             </div>
+
             <button id="fullscreenBtn" class="fullscreen-btn">⛶ Fullscreen</button>
+
         </div>
     </div>
 
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
@@ -84,6 +123,11 @@
         </div>
     </footer>
 
+
+    <!-- ==========================================================================
+         SCRIPTS
+         ========================================================================== -->
     <script src="script.js"></script>
+
 </body>
 </html>
