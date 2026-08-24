@@ -113,8 +113,7 @@
   "description": "Classic snake game — eat, grow, and avoid crashing into yourself",
   "emoji": "🐍",
   "iframeUrl": "https://unblokedgames.github.io/projects/google-snake/index.html"
- }
-],
+ },
 {
   "games": [
     {
@@ -127,4 +126,3 @@
     }
   ]
 },
-
