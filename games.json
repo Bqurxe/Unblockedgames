@@ -103,19 +103,15 @@
       "description": "Jump and fly through danger in this rhythm-based platformer",
       "emoji": "🔺",
       "iframeUrl": "https://unblokedgames.github.io/projects/geodash/index.html"
-    }
-  ]
-},
-{
-  "id": 14,
-  "title": "Google Snake",
-  "category": "puzzle",
-  "description": "Classic snake game — eat, grow, and avoid crashing into yourself",
-  "emoji": "🐍",
-  "iframeUrl": "https://unblokedgames.github.io/projects/google-snake/index.html"
- },
-{
-  "games": [
+    },
+    {
+      "id": 14,
+      "title": "Google Snake",
+      "category": "puzzle",
+      "description": "Classic snake game — eat, grow, and avoid crashing into yourself",
+      "emoji": "🐍",
+      "iframeUrl": "https://unblokedgames.github.io/projects/google-snake/index.html"
+    },
     {
       "id": 15,
       "title": "Tomb of the Mask",
@@ -125,4 +121,4 @@
       "iframeUrl": "https://unblokedgames.github.io/projects/totm/index.html"
     }
   ]
-},
+}
