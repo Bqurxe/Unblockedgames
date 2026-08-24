@@ -1,5 +1,6 @@
 // DOM Elements
 const gamesList = document.getElementById('gamesList');
+const trendingList = document.getElementById('trendingList');
 const searchInput = document.getElementById('searchInput');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const modal = document.getElementById('gameModal');
@@ -16,6 +17,9 @@ let filteredGames = [];
 let currentFilter = 'all';
 let currentSearchTerm = '';
 
+// Trending game IDs (Baldi's Basics and other popular games)
+const trendingGameIds = [26, 5, 21, 9, 2, 14];
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadGames();
@@ -29,6 +33,7 @@ async function loadGames() {
         const data = await response.json();
         allGames = data.games;
         filteredGames = [...allGames];
+        renderTrendingGames();
         renderGames();
     } catch (error) {
         console.error('Error loading games:', error);
@@ -75,6 +80,18 @@ function setupEventListeners() {
     });
 }
 
+// Render trending games
+function renderTrendingGames() {
+    trendingList.innerHTML = '';
+    
+    const trendingGames = allGames.filter(game => trendingGameIds.includes(game.id));
+    
+    trendingGames.forEach(game => {
+        const gameCard = createGameCard(game, true);
+        trendingList.appendChild(gameCard);
+    });
+}
+
 // Filter and render games
 function filterAndRenderGames() {
     filteredGames = allGames.filter(game => {
@@ -99,16 +116,23 @@ function renderGames() {
     noResults.style.display = 'none';
 
     filteredGames.forEach(game => {
-        const gameCard = createGameCard(game);
+        const gameCard = createGameCard(game, false);
         gamesList.appendChild(gameCard);
     });
 }
 
 // Create a game card element
-function createGameCard(game) {
+function createGameCard(game, isTrending = false) {
     const card = document.createElement('div');
     card.className = 'game-card';
+    
+    let trendingBadgeHTML = '';
+    if (isTrending) {
+        trendingBadgeHTML = '<span class="trending-badge">🔥 Trending</span>';
+    }
+    
     card.innerHTML = `
+        ${trendingBadgeHTML}
         <div class="game-thumbnail">${game.emoji}</div>
         <div class="game-info">
             <h3 class="game-title">${game.title}</h3>
