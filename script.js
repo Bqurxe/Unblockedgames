@@ -1,22 +1,118 @@
 /* ==========================================================================
    TABLE OF CONTENTS
-   1. DOM Elements
-   2. State
-   3. Config
-   4. Init
-   5. Event Listeners
-   6. Rendering
-      6.1 Trending Games
-      6.2 Filtering
-      6.3 Game Grid
-      6.4 Game Card Factory
-   7. Modal Controls
-   8. Utilities
+   1. Password Protection
+   2. DOM Elements
+   3. State
+   4. Config
+   5. Init
+   6. Event Listeners
+   7. Rendering
+       7.1 Trending Games
+       7.2 Filtering
+       7.3 Game Grid
+       7.4 Game Card Factory
+   8. Modal Controls
+   9. Utilities
    ========================================================================== */
 
 
 /* ==========================================================================
-   1. DOM ELEMENTS
+   1. PASSWORD PROTECTION
+   ========================================================================== */
+
+const PASSWORD = '1230';
+const MAX_ATTEMPTS = 5;
+let passwordAttempts = MAX_ATTEMPTS;
+let isPasswordCorrect = false;
+
+// Check if password was already entered in this session
+window.addEventListener('beforeunload', () => {
+    if (isPasswordCorrect) {
+        sessionStorage.setItem('gameAccessGranted', 'true');
+    }
+});
+
+// Restore access if user had already entered password
+window.addEventListener('load', () => {
+    if (sessionStorage.getItem('gameAccessGranted') === 'true') {
+        isPasswordCorrect = true;
+        unlockGames();
+    }
+});
+
+function setupPasswordProtection() {
+    const passwordInput = document.getElementById('passwordInput');
+    const submitPasswordBtn = document.getElementById('submitPasswordBtn');
+    const passwordError = document.getElementById('passwordError');
+    const attemptsCounter = document.getElementById('attemptsCounter');
+    const passwordForm = document.getElementById('passwordForm');
+    const lockedMessage = document.getElementById('lockedMessage');
+    const resetBtn = document.getElementById('resetBtn');
+
+    // Submit on button click
+    submitPasswordBtn.addEventListener('click', checkPassword);
+
+    // Submit on Enter key
+    passwordInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            checkPassword();
+        }
+    });
+
+    // Reset button
+    resetBtn.addEventListener('click', () => {
+        passwordAttempts = MAX_ATTEMPTS;
+        attemptsCounter.textContent = passwordAttempts;
+        lockedMessage.style.display = 'none';
+        passwordForm.style.display = 'block';
+        passwordInput.value = '';
+        passwordInput.focus();
+        passwordError.style.display = 'none';
+    });
+
+    function checkPassword() {
+        const inputPassword = passwordInput.value;
+
+        if (inputPassword === PASSWORD) {
+            isPasswordCorrect = true;
+            sessionStorage.setItem('gameAccessGranted', 'true');
+            unlockGames();
+            passwordError.style.display = 'none';
+        } else {
+            passwordAttempts--;
+            attemptsCounter.textContent = passwordAttempts;
+
+            if (passwordAttempts <= 0) {
+                // Lock the access
+                passwordForm.style.display = 'none';
+                lockedMessage.style.display = 'block';
+                passwordError.style.display = 'none';
+            } else {
+                // Show error message
+                passwordError.style.display = 'block';
+                passwordError.textContent = `❌ Incorrect password. ${passwordAttempts} attempt${passwordAttempts !== 1 ? 's' : ''} remaining.`;
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }
+    }
+}
+
+function unlockGames() {
+    const passwordModal = document.getElementById('passwordModal');
+    const mainContent = document.getElementById('mainContent');
+
+    passwordModal.classList.remove('active');
+    mainContent.style.display = 'block';
+
+    // Initialize games after modal is hidden
+    loadGames();
+    setupEventListeners();
+}
+
+
+/* ==========================================================================
+   2. DOM ELEMENTS
    ========================================================================== */
 
 const gamesList = document.getElementById('gamesList');
@@ -35,7 +131,7 @@ const noResults = document.getElementById('noResults');
 
 
 /* ==========================================================================
-   2. STATE
+   3. STATE
    ========================================================================== */
 
 let allGames = [];
@@ -45,7 +141,7 @@ let currentSearchTerm = '';
 
 
 /* ==========================================================================
-   3. CONFIG
+   4. CONFIG
    ========================================================================== */
 
 // IDs of games featured in the "Trending" section.
@@ -54,12 +150,11 @@ const trendingGameIds = [12, 7, 5, 2, 9, 8];
 
 
 /* ==========================================================================
-   4. INIT
+   5. INIT
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadGames();
-    setupEventListeners();
+    setupPasswordProtection();
 });
 
 // Fetch game data and perform the initial render
@@ -81,7 +176,7 @@ async function loadGames() {
 
 
 /* ==========================================================================
-   5. EVENT LISTENERS
+   6. EVENT LISTENERS
    ========================================================================== */
 
 function setupEventListeners() {
@@ -124,10 +219,10 @@ function setupEventListeners() {
 
 
 /* ==========================================================================
-   6. RENDERING
+   7. RENDERING
    ========================================================================== */
 
-/* --- 6.1 Trending Games --- */
+/* --- 7.1 Trending Games --- */
 
 function renderTrendingGames() {
     trendingList.innerHTML = '';
@@ -140,7 +235,7 @@ function renderTrendingGames() {
     });
 }
 
-/* --- 6.2 Filtering --- */
+/* --- 7.2 Filtering --- */
 
 function filterAndRenderGames() {
     filteredGames = allGames.filter(game => {
@@ -157,7 +252,7 @@ function filterAndRenderGames() {
     renderGames();
 }
 
-/* --- 6.3 Game Grid --- */
+/* --- 7.3 Game Grid --- */
 
 function renderGames() {
     gamesList.innerHTML = '';
@@ -175,7 +270,7 @@ function renderGames() {
     });
 }
 
-/* --- 6.4 Game Card Factory --- */
+/* --- 7.4 Game Card Factory --- */
 
 function createGameCard(game, isTrending = false) {
     const card = document.createElement('div');
@@ -206,7 +301,7 @@ function createGameCard(game, isTrending = false) {
 
 
 /* ==========================================================================
-   7. MODAL CONTROLS
+   8. MODAL CONTROLS
    ========================================================================== */
 
 function openModal(game) {
@@ -236,7 +331,7 @@ function toggleFullscreen() {
 
 
 /* ==========================================================================
-   8. UTILITIES
+   9. UTILITIES
    ========================================================================== */
 
 function capitalizeCategory(category) {
