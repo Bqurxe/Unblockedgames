@@ -9,120 +9,160 @@
 <body>
 
     <!-- ==========================================================================
-         HEADER
+         PASSWORD MODAL
          ========================================================================== -->
-    <header>
-        <div class="container">
-            <h1>🎮 Unblocked Games</h1>
-            <p class="tagline">Play your favorite games anytime, anywhere</p>
-        </div>
-    </header>
+    <div id="passwordModal" class="password-modal active">
+        <div class="password-container">
+            <div class="password-header">
+                <h1>🎮 Unblocked Games</h1>
+                <p>Enter Password to Continue</p>
+            </div>
 
-
-    <!-- ==========================================================================
-         NAVBAR (Search + Filters)
-         ========================================================================== -->
-    <nav class="navbar">
-        <div class="container">
-
-            <!-- Search -->
-            <div class="search-bar">
+            <div id="passwordForm" class="password-form">
                 <input
-                    type="text"
-                    id="searchInput"
-                    class="search-input"
-                    placeholder="Search games..."
+                    type="password"
+                    id="passwordInput"
+                    class="password-input"
+                    placeholder="Enter password..."
+                    autofocus
                 >
-                <span class="search-icon">🔍</span>
+                <button id="submitPasswordBtn" class="password-btn">Submit</button>
             </div>
 
-            <!-- Category Filters -->
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">All Games</button>
-                <button class="filter-btn" data-filter="action">Action</button>
-                <button class="filter-btn" data-filter="puzzle">Puzzle</button>
-                <button class="filter-btn" data-filter="strategy">Strategy</button>
-                <button class="filter-btn" data-filter="sports">Sports</button>
+            <div id="passwordError" class="password-error" style="display: none;"></div>
+
+            <div id="attemptsInfo" class="attempts-info">
+                <p>Attempts remaining: <span id="attemptsCounter">5</span></p>
             </div>
 
-        </div>
-    </nav>
-
-
-    <!-- ==========================================================================
-         MAIN CONTENT
-         ========================================================================== -->
-    <main class="container">
-
-        <!-- ── Trending Section ─────────────────────────────────────────────── -->
-        <section class="trending-section">
-            <div class="section-header">
-                <h2>🔥 Trending Games</h2>
-                <p class="section-subtitle">Most popular right now</p>
+            <div id="lockedMessage" class="locked-message" style="display: none;">
+                <p>❌ Too many incorrect attempts. Access denied.</p>
+                <button id="resetBtn" class="reset-btn">Reset</button>
             </div>
-
-            <div id="trendingList" class="games-grid trending-grid">
-                <!-- Trending games are injected here by script.js -->
-            </div>
-        </section>
-
-        <!-- ── All Games Section ────────────────────────────────────────────── -->
-        <section class="games-section">
-            <div class="section-header">
-                <h2>🎯 All Games</h2>
-                <p class="section-subtitle">Browse our full collection</p>
-            </div>
-
-            <div id="gamesList" class="games-grid">
-                <!-- Games are injected here by script.js -->
-            </div>
-
-            <div id="noResults" class="no-results" style="display: none;">
-                <p>No games found. Try a different search or filter.</p>
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- ==========================================================================
-         GAME MODAL
-         ========================================================================== -->
-    <div id="gameModal" class="modal">
-        <div class="modal-content">
-
-            <button class="close-btn">&times;</button>
-
-            <div class="modal-header">
-                <h2 id="modalGameTitle"></h2>
-                <span id="modalGameCategory" class="game-category"></span>
-            </div>
-
-            <div class="game-frame-container">
-                <iframe
-                    id="gameFrame"
-                    src=""
-                    frameborder="0"
-                    allow="autoplay; fullscreen"
-                ></iframe>
-            </div>
-
-            <button id="fullscreenBtn" class="fullscreen-btn">⛶ Fullscreen</button>
-
         </div>
     </div>
 
-
     <!-- ==========================================================================
-         FOOTER
+         MAIN CONTENT (Hidden until password is correct)
          ========================================================================== -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
-            <p>Have fun and enjoy your favorite games!</p>
-        </div>
-    </footer>
+    <div id="mainContent" style="display: none;">
 
+        <!-- ==========================================================================
+             HEADER
+             ========================================================================== -->
+        <header>
+            <div class="container">
+                <h1>🎮 Unblocked Games</h1>
+                <p class="tagline">Play your favorite games anytime, anywhere</p>
+            </div>
+        </header>
+
+
+        <!-- ==========================================================================
+             NAVBAR (Search + Filters)
+             ========================================================================== -->
+        <nav class="navbar">
+            <div class="container">
+
+                <!-- Search -->
+                <div class="search-bar">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        class="search-input"
+                        placeholder="Search games..."
+                    >
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Games</button>
+                    <button class="filter-btn" data-filter="action">Action</button>
+                    <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+                    <button class="filter-btn" data-filter="strategy">Strategy</button>
+                    <button class="filter-btn" data-filter="sports">Sports</button>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <!-- ==========================================================================
+             MAIN CONTENT
+             ========================================================================== -->
+        <main class="container">
+
+            <!-- ── Trending Section ─────────────────────────────────────────────── -->
+            <section class="trending-section">
+                <div class="section-header">
+                    <h2>🔥 Trending Games</h2>
+                    <p class="section-subtitle">Most popular right now</p>
+                </div>
+
+                <div id="trendingList" class="games-grid trending-grid">
+                    <!-- Trending games are injected here by script.js -->
+                </div>
+            </section>
+
+            <!-- ── All Games Section ────────────────────────────────────────────── -->
+            <section class="games-section">
+                <div class="section-header">
+                    <h2>🎯 All Games</h2>
+                    <p class="section-subtitle">Browse our full collection</p>
+                </div>
+
+                <div id="gamesList" class="games-grid">
+                    <!-- Games are injected here by script.js -->
+                </div>
+
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>No games found. Try a different search or filter.</p>
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- ==========================================================================
+             GAME MODAL
+             ========================================================================== -->
+        <div id="gameModal" class="modal">
+            <div class="modal-content">
+
+                <button class="close-btn">&times;</button>
+
+                <div class="modal-header">
+                    <h2 id="modalGameTitle"></h2>
+                    <span id="modalGameCategory" class="game-category"></span>
+                </div>
+
+                <div class="game-frame-container">
+                    <iframe
+                        id="gameFrame"
+                        src=""
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                    ></iframe>
+                </div>
+
+                <button id="fullscreenBtn" class="fullscreen-btn">⛶ Fullscreen</button>
+
+            </div>
+        </div>
+
+
+        <!-- ==========================================================================
+             FOOTER
+             ========================================================================== -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
+                <p>Have fun and enjoy your favorite games!</p>
+            </div>
+        </footer>
+
+    </div>
 
     <!-- ==========================================================================
          SCRIPTS
