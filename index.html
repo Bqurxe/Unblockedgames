@@ -9,43 +9,9 @@
 <body>
 
     <!-- ==========================================================================
-         PASSWORD MODAL
+         MAIN CONTENT
          ========================================================================== -->
-    <div id="passwordModal" class="password-modal active">
-        <div class="password-container">
-            <div class="password-header">
-                <h1>🎮 Unblocked Games</h1>
-                <p>Enter Password to Continue</p>
-            </div>
-
-            <div id="passwordForm" class="password-form">
-                <input
-                    type="password"
-                    id="passwordInput"
-                    class="password-input"
-                    placeholder="Enter password..."
-                    autofocus
-                >
-                <button id="submitPasswordBtn" class="password-btn">Submit</button>
-            </div>
-
-            <div id="passwordError" class="password-error" style="display: none;"></div>
-
-            <div id="attemptsInfo" class="attempts-info">
-                <p>Attempts remaining: <span id="attemptsCounter">5</span></p>
-            </div>
-
-            <div id="lockedMessage" class="locked-message" style="display: none;">
-                <p>❌ Too many incorrect attempts. Access denied.</p>
-                <button id="resetBtn" class="reset-btn">Reset</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==========================================================================
-         MAIN CONTENT (Hidden until password is correct)
-         ========================================================================== -->
-    <div id="mainContent" style="display: none;">
+    <div id="mainContent">
 
         <!-- ==========================================================================
              HEADER
